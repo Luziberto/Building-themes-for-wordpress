@@ -9,7 +9,7 @@
     <!-- <script src="https://kit.fontawesome.com/a1b17a1515.js" crossorigin="anonymous"></script> -->
 
     <!-- <link rel="stylesheet" href="./style.css"> -->
-  
+    <?php wp_head(); ?>
     <title>Hospital</title>
 </head>
 <body>

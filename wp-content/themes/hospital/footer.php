@@ -17,9 +17,9 @@
             <p class="footer__text">Our hospital tries to answer the challenges in the 
                <br> community's need for quality dental health services <br> but still affordable by a wide audience.</p>
             <div class="footer__icons">
-                <img class="footer__icon" src="<?php $GLOBALS['assets_path']?>/img/behance.png" alt="">
-                <img class="footer__icon" src="<?php $GLOBALS['assets_path']?>/img/Linkedin.png" alt="">
-                <img class="footer__icon" src="<?php $GLOBALS['assets_path']?>/img/Whats.png" alt="">
+                <img class="footer__icon" src="<?php echo $GLOBALS['assets_path'].'/img/behance.png'?>" alt="">
+                <img class="footer__icon" src="<?php echo $GLOBALS['assets_path'].'/img/Linkedin.png'?>" alt="">
+                <img class="footer__icon" src="<?php echo $GLOBALS['assets_path'].'/img/Whats.png'?>" alt="">
             </div>
         </div>
 
