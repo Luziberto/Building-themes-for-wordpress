@@ -1,0 +1,63 @@
+.doctor {
+    text-align: center;
+    background: $background;
+    padding: 110px 70px;
+
+    &__subtitle {
+        font-size: 20px;
+        padding-top: 40px;
+    }
+
+    &__title {
+        padding-top: 25px;
+        margin-bottom: 70px;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (max-width: 600px) {
+            margin-bottom: 50px;
+        }
+    }
+    
+    &__cards-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+            display: flex;
+        }
+    }
+    
+    &__card-text {
+        border-radius: 5px;
+        margin-top: -80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 20px;
+        text-align: start;
+        width: 80%;
+        background: $white;
+        z-index: 2;
+        height: 150px;
+    }
+    
+    &__card-title {
+        font-size: 20px;
+    }
+    
+    &__card-subtitle {
+        font-size: 16px;
+    }
+    
+    &__card-image {
+        width: 95%;
+    }
+}
+
+
+

@@ -1,0 +1,52 @@
+.contact {
+    background: $gray;
+    margin: 80px;
+    padding: 70px;
+    
+    &__title {
+        color: $white;
+        font-family: 'Poppins', 'sans-serif';
+        font-weight: 1000;
+    }
+
+    &__container {
+        color: $white;
+        font-family: 'Poppins', 'sans-serif';
+        font-weight: 1000;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        align-items: center;
+        
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+        }
+    }
+
+    &__subtitle {
+        color: $white;
+        font-family: 'Poppins', 'sans-serif';
+        font-size: 18px;
+        font-weight: 600;
+
+        @media screen and (max-width: 600px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__button{
+        background: $primary-color;
+        padding: 15px 65px;
+        font-weight: 700;
+        border-radius: 4px;
+
+        transition-duration: 0.5s;
+
+        &:hover {
+            background-color: $primary-color;
+            color: $primary-color;
+            background: transparent;
+            border: 2px solid $primary-color;
+        }
+    }
+}

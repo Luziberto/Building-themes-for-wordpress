@@ -1,0 +1,55 @@
+.services {
+    text-align: center;
+    padding: 110px 70px;
+    background: $background;
+
+    &__subtitle {
+        font-size: 1.1rem;
+        padding-top: 90px;
+    }
+
+    &__title {
+        padding-top: 25px;
+    }
+    
+    &__card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 140px 0px;
+        justify-content: center;
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+            display: flex;
+        }
+    }
+
+    &__card {
+        background: $white;
+        border-radius: 4px;
+        padding: 30px;
+        height: 220px;
+        width: 300px;
+        margin: 0 auto;
+    
+        transition: transform 0.3s ease-in-out;
+        
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media screen and (max-width: 600px) {
+            margin-bottom: 100px;
+        }
+        
+        &-title {
+            font-size: 1.2rem;
+        }
+        
+        &-image {
+            margin-top: -100px;
+            margin-bottom: 50px;
+        }
+    }
+}

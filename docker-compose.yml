@@ -1,0 +1,64 @@
+version: '3'
+services:
+
+  #PHP Service
+  wordpress-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: wordpress/app
+    container_name: wordpress-app
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: wordpress-app
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+    ports:
+      - "9003:9003"
+    volumes:
+      - ./:/var/www
+      - ./.docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - app-network
+
+  #Nginx Service
+  wordpress-webserver:
+    image: nginx:alpine
+    container_name: wordpress-webserver
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www
+      - ./.docker/nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - app-network
+
+  #MySQL Service
+  wordpress-db:
+    image: mysql:8.0.16
+    container_name: wordpress-db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3308:3306"
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_ROOT_PASSWORD: root
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - app-network
+
+#Docker Networks
+networks:
+  app-network:
+    driver: bridge
+#Volumes
+volumes:
+  dbdata:
+    driver: local

@@ -1,0 +1,99 @@
+.footer {
+    background: $background;
+    padding: 100px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+        text-decoration: none;
+        font-weight: 900;
+        font-size: 1rem;
+        
+        &-mark {
+            color: $primary-color;
+        }
+    }
+
+    &__text {
+        margin-top: 30px;
+        color: $font-color;
+    }
+
+    &__icons {
+        margin-top: 30px;
+
+        @media screen and (max-width: 600px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__menu{
+
+        &-title {
+            font-size: 1.1rem;
+            color: $black;
+            font-weight: bolder;
+        }
+
+        &-list {
+            list-style-type: none;
+            text-decoration: none;
+        }
+
+        &-list li {
+            margin-top: 30px;
+        }
+
+        &-link {
+            font-size: 1rem;
+            text-decoration: none;
+
+            &:hover{
+                color: $primary-color;
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
+}
+
+.subscribe {
+
+    &__title {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    &__email {
+        background: $input-color;
+        width: 100%;
+        padding: 20px 25px;
+        display: block;
+        color: $white;
+        outline: none;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+
+    &__button {
+        background: $primary-color;
+        color: $white;
+        padding: 15px 65px;
+        font-weight: 800;
+        border-radius: 4px;
+        transition-duration: 0.5s;
+
+        &:hover{
+            background-color: $primary-color;
+            color: $primary-color;
+            background: transparent;
+            border: 2px solid $primary-color;
+            box-shadow: 0 2px 10px rgba($color: $box-shadow-color , $alpha: 1.0);
+        }
+    }
+}
+
