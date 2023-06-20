@@ -1,0 +1,65 @@
+.vc_element-icon.tana-vc-icon, .vc_general.vc_element-icon.tana-vc-icon {
+    width: 62px;
+    height: 52px;
+    top: 8px;
+    border: 1px solid rgba(77, 143, 255, 0.14);
+}
+
+a.tana-vc-element_nav {
+	color: #5192fc;
+}
+
+
+.vc_element-icon.tana-vc-icon{
+	background-image: url(../images/tana-icons.png);
+	background-size: 400px 225px;
+}
+
+.vc_add-element-container .wpb-content-layouts a.tana-vc-element_nav{
+	padding-left: 74px;
+}
+
+.wpb_content_element.tana-vc-element > .wpb_element_wrapper > .wpb_element_title .vc_element-icon{
+	margin-top: -10px;
+}
+
+
+.tana-vc-icon.tana-vc-icon01{ background-position: -5px -5px; } /* blog carousel */
+.tana-vc-icon.tana-vc-icon02{ background-position: -70px -5px; } /* blog grid */
+.tana-vc-icon.tana-vc-icon03{ background-position: -135px -5px; } /* blog list */
+.tana-vc-icon.tana-vc-icon04{ background-position: -200px -5px; } /* full carousel blog */
+.tana-vc-icon.tana-vc-icon05{ background-position: -265px -5px; } /* testimonial slider */
+.tana-vc-icon.tana-vc-icon06{ background-position: -330px -5px; } /* boxed list */
+.tana-vc-icon.tana-vc-icon07{ background-position: -5px -60px; } /* title */
+.tana-vc-icon.tana-vc-icon08{ background-position: -70px -60px; } /* news slider */
+.tana-vc-icon.tana-vc-icon09{ background-position: -135px -60px; } /* masonry */
+.tana-vc-icon.tana-vc-icon10{ background-position: -200px -60px; } /* fashion box */
+.tana-vc-icon.tana-vc-icon11{ background-position: -265px -60px; } /* right now */
+.tana-vc-icon.tana-vc-icon12{ background-position: -330px -60px; } /* half slider */
+.tana-vc-icon.tana-vc-icon13{ background-position: -5px -115px; } /* movie cart */
+.tana-vc-icon.tana-vc-icon14{ background-position: -70px -115px; } /* movie slider alternate */
+.tana-vc-icon.tana-vc-icon15{ background-position: -135px -115px; } /* quote box */
+.tana-vc-icon.tana-vc-icon16{ background-position: -200px -115px; } /* movie slider */
+.tana-vc-icon.tana-vc-icon17{ background-position: -265px -115px; } /* media list */
+.tana-vc-icon.tana-vc-icon18{ background-position: -330px -115px; } /* google map */
+.tana-vc-icon.tana-vc-icon19{ background-position: -5px -170px; } /* list masonry */
+.tana-vc-icon.tana-vc-icon20{ background-position: -70px -170px; } /* movie grid */
+.tana-vc-icon.tana-vc-icon21{ background-position: -135px -170px; } /* carousel full */
+.tana-vc-icon.tana-vc-icon22{ background-position: -200px -170px; } /* masonry alternate */
+.tana-vc-icon.tana-vc-icon23{ background-position: -265px -170px; } /* trending */
+.tana-vc-icon.tana-vc-icon24{ background-position: -330px -170px; } /* grid carousel */
+
+
+/*
+.vc_add-element-container .wpb-content-layouts li.wpb-layout-element-button{
+	-webkit-transition: transform 0.25s ease;
+	   -moz-transition: transform 0.25s ease;
+			transition: transform 0.25s ease;
+}
+.vc_add-element-container .wpb-content-layouts li.wpb-layout-element-button:hover{
+	z-index: 10;
+	-webkit-transform: scale(2);
+	   -moz-transform: scale(2);
+			transform: scale(2);
+}
+*/

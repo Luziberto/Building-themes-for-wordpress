@@ -1,0 +1,274 @@
+.mejs-offscreen{
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px,1px,1px,1px);
+    clip-path: polygon(0px 0,0 0,0 0,0 0);
+    position: absolute!important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.mejs-container{
+	position: relative;
+	display: block;
+	background-color: fade(@color-text, 3%) !important;
+
+	// Audio
+	&.mejs-audio{
+		height: 60px !important;
+		.mejs-controls{
+			height: 60px;
+		}
+	}
+
+	.mejs-controls{
+		position: relative;
+		padding-left: 130px !important;
+		padding-right: 80px !important;
+		background-color: transparent !important;
+
+		/* Play */
+		.mejs-playpause-button{
+			position: absolute;
+			top: 50%;
+			left: 30px;
+			.translateY(-50%);
+
+			button{
+				display: block;
+				width: 20px;
+				height: 26px;
+				padding: 0px;
+				margin: 0px;
+				overflow: hidden;
+				position: relative;
+				background: none;
+				padding: 0px;
+				margin: 0px;
+
+				&::before, &::after{
+					content: '\f04b';
+					font-family: Fontawesome;
+					font-size: 20px;
+					color: @color-title;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					.transition();
+					.translate(-50%, -100%);
+					visibility: hidden;
+					opacity: 0;
+				}
+
+				&::after{
+					content: '\f04c';
+					.translate(-50%, 100%);
+				}
+			}
+
+			&.mejs-play{
+				button::before{
+					visibility: visible;
+					opacity: 1;
+					.translate(-50%, 0%);
+				}
+			}
+			&.mejs-pause{
+				button::after{
+					visibility: visible;
+					opacity: 1;
+					.translate(-50%, 0%);
+				}
+			}
+		}
+
+
+		/* Rails */
+		div.mejs-time-rail{
+			direction: ltr;
+			padding: 0px;
+			margin: 0px;
+			position: absolute;
+			top: 50%;
+			.translateY(-50%);
+
+			.mejs-time-total:focus{
+				outline: none;
+			}
+			.mejs-time-total{
+				background-color: fade(@color-title, 10%);
+				height: 2px;
+				margin: 0px;
+				top: 12px;
+			}
+			.mejs-time-loaded{
+				background-color: fade(@color-brand, 20%);
+				height: 2px;
+			}
+			.mejs-time-current{
+				background-color: @color-brand;
+				height: 2px;
+			}
+
+			.mejs-time-handle{
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: @color-brand;
+				position: absolute;
+				top: -4px;
+				border: none;
+				display: inline-block;
+				visibility: hidden;
+				opacity: 0;
+				.transition();
+			}
+
+			&:hover .mejs-time-handle{
+				visibility: visible;
+				opacity: 1;
+			}
+
+			.mejs-time-float{
+				display: none !important;
+			}
+		}
+
+
+		/* Timing */
+		.mejs-time{
+			font-size: 12px;
+			color: fade(@color-title, 40%) !important;
+			position: absolute;
+			top: 50%;
+			.translateY(-50%);
+			padding: 0px !important;
+			line-height: 1em;
+			height: auto !important;
+
+			&.mejs-currenttime-container{
+				left: 80px;
+			}
+			&.mejs-duration-container{
+				right: 30px;
+			}
+		}
+
+		.mejs-fullscreen-button{
+			position: absolute;
+			right: 30px;
+			top: 50%;
+			.translateY(-50%);
+
+			button{
+				display: inline-block;
+				width: 26px;
+				height: 26px;
+				background: none;
+				line-height: 26px;
+				text-align: right;
+				color: fade(@color-title, 40%);
+				padding: 0px;
+				margin: 0px;
+
+				&::before{
+					content: '\f0b2';
+					font-family: Fontawesome;
+					font-size: 16px;
+				}
+			}
+		}
+
+
+		/* Volume Icon */
+		.mejs-volume-button,
+		.mejs-horizontal-volume-slider{
+			display: none;
+		}
+	}
+
+
+	// Video
+	&.mejs-video{
+		margin-bottom: 70px;
+		.mejs-mediaelement{
+			
+		}
+		.mejs-controls{
+			height: 50px !important;
+			bottom: -50px;
+			background-color: fade(@color-text, 3%) !important;
+			padding-right: 110px !important;
+
+			.mejs-time{
+				&.mejs-duration-container{
+					right: 60px;
+				}
+			}
+		}
+	}
+}
+
+
+
+.wp-playlist{
+	overflow: hidden;
+
+	.mejs-container{
+		.mejs-controls{
+			padding-left: 170px !important;
+			.mejs-playpause-button{
+				left: 60px;
+			}
+			.mejs-time{
+				&.mejs-currenttime-container{
+					left: 120px;
+				}
+			}
+		}
+	}
+
+	.wp-playlist-prev, .wp-playlist-next{
+		position: relative;
+		float: left;
+		width: 20px;
+		cursor: pointer;
+
+		&::before{
+			content: '\f04a';
+			font-family: Fontawesome;
+			color: fade(@color-title, 20%);
+			font-size: 16px;
+		}
+
+		&.wp-playlist-prev{
+			.translate(10px, -42px);
+		}
+		&.wp-playlist-next{
+			.translate(90px, -42px);
+			
+			&::before{
+				content: '\f04e';
+			}
+		}
+	}
+
+	.wp-playlist-tracks{
+		clear: left;
+	}
+
+
+	&.wp-video-playlist{
+		.wp-playlist-prev, .wp-playlist-next{
+			&.wp-playlist-prev{
+				.translate(10px, 12px);
+			}
+			&.wp-playlist-next{
+				.translate(90px, 12px);
+			}
+		}
+		.wp-playlist-tracks{
+			margin-top: 70px;
+		}
+	}
+}

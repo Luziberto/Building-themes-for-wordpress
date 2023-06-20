@@ -1,0 +1,42 @@
+.icon-list-element {
+	list-style:none;
+	li{
+		line-height: 2.5em;
+		color: @color-title;
+		a {
+			color: @color-text;
+			text-decoration: none;
+			&:hover {
+				color: @color-ancient1;
+				&:before {
+					border-color: @color-ancient1;
+				}
+			}
+		}
+	}
+}
+ul.icon-list-element {
+	padding-left:0;
+	li {
+		i {
+			margin-right: 10px;
+		}
+	}
+}
+ol.icon-list-element {
+	li {
+		padding-left: 3em;
+		position: relative;
+		&::before {
+		  	content: attr(data-number);
+		  	font-size: 1.2em;
+		  	font-weight: 600;
+		  	position: absolute;
+		  	left:0;
+		  	color: @color-brand;
+		}
+		&:hover:before {
+			color: @color-ancient1;
+		}
+	}
+}

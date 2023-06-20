@@ -1,0 +1,4 @@
+.menu-item.menu-item-depth-1 .field-activemega,
+.menu-item.menu-item-depth-1 .field-vsubmenu{
+	display: none;
+}

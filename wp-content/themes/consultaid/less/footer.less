@@ -1,0 +1,142 @@
+footer{
+	color: @color-footertext;
+	a {
+		color:darken(@color-footertext, 15%);
+		&:hover {
+			color:darken(@color-footertext, 10%);
+		}
+	}
+	&#footer{
+		background-color: @color-footerbg;
+		padding: @footer-padding 0px;
+
+		.footer-logo {
+			text-decoration: none !important;
+			h1 {
+				color: @color-footertitle;
+				.transition();
+				&:hover {
+					.transition();
+					color: @color-brand;
+				}
+			}		
+		}
+		
+		.footer-menu{
+			list-style-type: none;
+			display: block;
+			margin: 0px;
+			padding: 0px;
+
+			li{
+				display: inline-block;
+				margin-right: 10px;
+
+				&:last-child{
+					margin-right: 0px;
+				}
+
+				a{
+					display: inline-block;
+				}
+			}
+		}
+		.widget {
+			.widget-title {
+				.typo('font-footertitle');
+				color: @color-footertitle;
+			}
+			ul{
+				li{
+					a{
+		                .transition();
+		                font-size: 15px;
+		                color: #64676a;
+		                &:hover{
+		                	color:#67b930;
+		                };
+		            }
+				}
+			}
+		}
+	}
+	
+	.uk-navbar-nav {
+		li a {
+			height: auto;
+		}
+		li:first-child a{
+			padding-left:0;
+		}
+		li:last-child a{
+			padding-right:0;
+		}
+	}
+
+	.widget {
+		&.latest_blogs .fs-recent-post{
+	        .entry-rp{
+	            .entry-meta{
+	                span{
+	                    a{
+	                        color: fade(@color-footertext, 90%);
+	                        .transition();
+	                        &:hover{
+	                        	color:#67b930;
+	                        };
+	                    }
+	                }
+	            }
+	        }
+	    }
+	    ul {
+	    	li {
+	    		border: 0;
+	    		padding-top: 0;
+	    		padding-bottom: 6px;
+	    	}
+	    }
+	    .search_form {
+	    	background: #252627;
+	    	border: 0;
+	    	button {
+	    		background-color: @color-brand;
+	    		color: #fff;
+	    		border-top-right-radius: 3px;
+	    		border-bottom-right-radius: 3px;
+	    	}
+	    }
+	    input {
+	    	color: #fff;
+	    }
+		address {
+	        span {
+	        	color: #fff;
+	        }
+	    }
+	    &.widget_social {
+	    	a {
+	    		color: #fff;
+	    		margin-right: 15px;
+	    	}
+	    }
+	}
+	@media screen and (max-width: 640px) {
+		.footer-column{
+			&+.footer-column {
+				margin-top: 30px;
+			}
+		}
+	}
+}
+.footer_sub {
+	padding-top: 20px;
+	border-top: 1px solid rgba(255,255,255,.15);
+}
+.uk-grid-collapse.footer_sub{
+	margin-top:60px;
+}
+.footer_top {
+	border-bottom: 1px solid rgba(255,255,255,.15);
+	padding-bottom: 20px;
+}
